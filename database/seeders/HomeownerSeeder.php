@@ -10,7 +10,7 @@ class HomeownerSeeder extends Seeder
 {
     public function run()
     {
-        $faker = Faker::create('en_PH'); // Set locale to Philippines for more relevant data
+        $faker = Faker::create('en_PH'); 
 
         for ($i = 0; $i < 20; $i++) {
             Homeowner::create([
@@ -19,7 +19,7 @@ class HomeownerSeeder extends Seeder
                 'last_name' => $faker->lastName,
                 'email' => $faker->unique()->safeEmail,
                 'phone' => $this->generatePhilippineMobileNumber(),
-                'address' => $this->formatAddress($faker->address), // Format the address
+                'address' => $this->formatAddress($faker->address), 
                 'occupation' => $faker->jobTitle,
             ]);
         }
@@ -37,12 +37,12 @@ class HomeownerSeeder extends Seeder
 
     private function formatAddress($address)
     {
-        // Try to extract town/city and province (very basic)
+
         $parts = explode(',', $address);
         if (count($parts) >= 2) {
-            return trim($parts[0]) . ", " . trim($parts[1]); // Just town/city and province
+            return trim($parts[0]) . ", " . trim($parts[1]); 
         } else {
-            return trim($address); // Return original if can't parse
+            return trim($address); 
         }
     }
 }

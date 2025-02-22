@@ -98,12 +98,12 @@
     border-radius: 0.375rem;
     border: none;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    transition: background-color 0.2s ease; /* Add transition for smooth hover effect */
+    transition: background-color 0.2s ease; 
 }
 
 .add_another_btn:hover {
-    background-color: #15885f; /* Darker shade of green on hover */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #15885f; 
+    cursor: pointer; 
 }
 
 .home_btn {
@@ -120,14 +120,14 @@
     border: 1px solid #D1D5DB;
     background-color: #fff;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease; /* Add transition */
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease; 
 }
 
 .home_btn:hover {
-    background-color: #f0f0f0; /* Light gray on hover */
-    color: #000; /* Darker text on hover */
-    border-color: #aaa; /* Slightly darker border */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    background-color: #f0f0f0; 
+    color: #000; 
+    border-color: #aaa; 
+    cursor: pointer; 
 }
    
     

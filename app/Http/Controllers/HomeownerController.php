@@ -46,7 +46,7 @@ class HomeownerController extends Controller
             'occupation' => 'required|string|max:255',
         ]);
 
-        // Create a new Homeowner instance and assign values
+        
         $homeowner = new Homeowner();
         $homeowner->first_name = $validated['first_name'];
         $homeowner->middle_name = $validated['middle_name'];
@@ -80,7 +80,7 @@ class HomeownerController extends Controller
     {
 
         $homeowner = Homeowner::find($id);
-        $request->validate([ // Validate the form data
+        $request->validate([ 
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',
             'email' => 'required|email|max:255|unique:homeowners,email,' . $homeowner->id,
@@ -110,7 +110,7 @@ class HomeownerController extends Controller
 
     public function delete_confirm($id)
     {
-        $homeowner = Homeowner::find($id); // Find the homeowner
+        $homeowner = Homeowner::find($id); 
 
         return view('delete_confirm', compact('homeowner'));
     }
